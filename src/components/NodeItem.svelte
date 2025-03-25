@@ -1,18 +1,18 @@
 <script lang="ts">
-  import type { LightningNode } from "../lib/types";
-  import { satsToBTC, formatUnixTimestamp } from "../lib/utils";
-  import Copy from "../icons/Copy.svelte";
+  import type { LightningNode } from "../lib/types"
+  import { satsToBTC, formatUnixTimestamp } from "../lib/utils"
+  import Copy from "../icons/Copy.svelte"
 
-  let { node }: { node: LightningNode } = $props();
+  let { node }: { node: LightningNode } = $props()
 
   function truncatedKey(pk: string) {
-    return `${pk.slice(0, 6)}...${pk.slice(-6)}`;
+    return `${pk.slice(0, 6)}...${pk.slice(-6)}`
   }
 
   function copyKey(pk: string) {
     navigator.clipboard.writeText(pk).then(() => {
-      alert("Copied Public Key!");
-    });
+      alert("Copied Public Key!")
+    })
   }
 </script>
 
@@ -33,18 +33,44 @@
     border-gray-300
   "
 >
-  <div class="flex items-start justify-between mb-3 w-full">
-    <div class="flex items-center">
-      <div class="relative group">
-        <h2 class="font-semibold text-lg text-gray-900 truncate max-w-[140px]">
-          {node.alias || "Unknown Node"}
-        </h2>
-        <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 z-50 whitespace-nowrap">
-          {node.alias || "Unknown Node"}
-        </div>
+  <div class="flex items-center w-full gap-2 mb-3">
+    <div class="relative group flex-1 min-w-0">
+      <h2 class="font-semibold text-lg text-gray-900 truncate">
+        {node.alias || "Unknown Node"}
+      </h2>
+      <div
+        class="
+          absolute
+          left-0
+          bottom-full
+          mb-2
+          hidden
+          group-hover:block
+          bg-gray-800
+          text-white
+          text-xs
+          rounded
+          py-1
+          px-2
+          z-50
+          whitespace-nowrap
+        "
+      >
+        {node.alias || "Unknown Node"}
       </div>
     </div>
-    <div class="px-2 py-1 rounded-full bg-lightning-50 text-lightning-700 text-xs font-medium flex-shrink-0">
+    <div
+      class="
+        px-2
+        py-1
+        rounded-full
+        bg-lightning-50
+        text-lightning-700
+        text-xs
+        font-medium
+        flex-shrink-0
+      "
+    >
       {node.country?.en || "Unknown"}
     </div>
   </div>
