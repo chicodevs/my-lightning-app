@@ -32,9 +32,15 @@ export function createNodesStore() {
   }
 
   return {
-    get nodes() { return nodes; },
-    get loading() { return loading; },
-    get error() { return error; },
+    get nodes() {
+      return nodes;
+    },
+    get loading() {
+      return loading;
+    },
+    get error() {
+      return error;
+    },
     refresh: loadNodes,
   };
 }
