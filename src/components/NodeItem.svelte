@@ -20,7 +20,6 @@
   class="
     glass-card
     rounded-xl
-    overflow-hidden
     transition-all
     duration-300
     hover:shadow-xl
@@ -35,12 +34,17 @@
   "
 >
   <div class="flex items-start justify-between mb-3 w-full">
-    <h2 class="font-semibold text-lg text-gray-900 truncate max-w-[140px]">
-      {node.alias || "Unknown Node"}
-    </h2>
-    <div
-      class="px-2 py-1 rounded-full bg-lightning-50 text-lightning-700 text-xs font-medium flex-shrink-0"
-    >
+    <div class="flex items-center">
+      <div class="relative group">
+        <h2 class="font-semibold text-lg text-gray-900 truncate max-w-[140px]">
+          {node.alias || "Unknown Node"}
+        </h2>
+        <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 z-50 whitespace-nowrap">
+          {node.alias || "Unknown Node"}
+        </div>
+      </div>
+    </div>
+    <div class="px-2 py-1 rounded-full bg-lightning-50 text-lightning-700 text-xs font-medium flex-shrink-0">
       {node.country?.en || "Unknown"}
     </div>
   </div>
@@ -49,9 +53,7 @@
     <div class="flex justify-between items-center">
       <span class="text-sm text-gray-500">Public Key:</span>
       <div class="flex items-center gap-2">
-        <span
-          class="text-sm font-mono bg-gray-100 px-2 py-0.5 rounded break-all"
-        >
+        <span class="text-sm font-mono bg-gray-100 px-2 py-0.5 rounded break-all">
           {truncatedKey(node.publicKey)}
         </span>
         <button
