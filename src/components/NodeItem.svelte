@@ -108,11 +108,11 @@
   <div class="pt-3 border-t border-gray-100 space-y-1.5 text-xs text-gray-500">
     <div class="flex justify-between">
       <span>First Seen:</span>
-      <span>{formatUnixTimestamp(node.firstSeen)}</span>
+      <span>{formatUnixTimestamp(node.firstSeen)} <span class="text-gray-400">UTC</span></span>
     </div>
     <div class="flex justify-between">
       <span>Last Updated:</span>
-      <span>{formatUnixTimestamp(node.updatedAt)}</span>
+      <span>{formatUnixTimestamp(node.updatedAt)} <span class="text-gray-400">UTC</span></span>
     </div>
   </div>
 </article>

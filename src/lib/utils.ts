@@ -3,5 +3,6 @@ export function satsToBTC(sats: number): string {
 }
 
 export function formatUnixTimestamp(timestamp: number): string {
-  return new Date(timestamp * 1000).toLocaleString();
+  return new Date(timestamp * 1000).toLocaleString("en-US", { timeZone: "UTC" });
 }
+
