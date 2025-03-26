@@ -10,7 +10,7 @@
 </script>
 
 <header
-  class="w-full flex items-center justify-between py-6 px-4 sm:px-6 md:px-8 bg-gradient-to-r from-lightning-300 to-lightning-600 text-white shadow-lg sticky top-0 z-50"
+  class="w-full flex items-center justify-between py-6 px-4 sm:px-6 md:px-8 bg-gradient-to-r from-lightning-600 to-lightning-300 text-white shadow-lg sticky top-0 z-50"
 >
   <h1 class="text-2xl md:text-3xl font-bold">
     <span class="flex items-center space-x-3">

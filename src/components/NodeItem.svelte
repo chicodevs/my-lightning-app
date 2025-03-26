@@ -31,6 +31,8 @@
     h-60
     border
     border-gray-300
+    bg-white
+    shadow
   "
 >
   <div class="flex items-center w-full gap-2 mb-3">
