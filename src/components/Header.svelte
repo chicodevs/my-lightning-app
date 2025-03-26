@@ -10,11 +10,11 @@
 </script>
 
 <header
-  class="w-full flex items-center justify-between py-6 px-4 sm:px-6 md:px-8 bg-gradient-to-r from-lightning-600 to-lightning-300 text-white shadow-lg sticky top-0 z-50"
+  class="w-full flex items-center justify-between py-6 px-4 sm:px-6 md:px-8 bg-gradient-to-r from-lightning-600 to-lightning-300 text-white shadow-lg sticky top-0 z-50 md:flex-row flex-col gap-y-2"
 >
-  <h1 class="text-2xl md:text-3xl font-bold">
+  <h1 class="text-xl md:text-3xl font-bold">
     <span class="flex items-center space-x-3">
-      <LightningBolt />
+      <LightningBolt class="hidden md:inline-block" />
       <span>Lightning Network Top 100 Nodes</span>
     </span>
   </h1>
