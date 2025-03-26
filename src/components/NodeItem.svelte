@@ -100,7 +100,7 @@
     <div class="flex justify-between items-center">
       <span class="text-sm text-gray-500">Capacity:</span>
       <span class="text-sm font-medium text-lightning-600">
-        {satsToBTC(node.capacity)}
+        {satsToBTC(node.capacity)} <span class="text-gray-400">BTC</span>
       </span>
     </div>
   </div>
